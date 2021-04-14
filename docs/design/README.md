@@ -11,7 +11,7 @@ J Lang is designed with 3 key principals:
 
 ### Variable Declarations
 
-```j
+```
 string name = 'jlang'
 
 int born = 2021
@@ -20,7 +20,7 @@ float bens-height-in-meters = 1.778
 
 
 // Struct is not for sure yet
-struct user{
+struct user {
     string name,
     string bio,
     int followers
