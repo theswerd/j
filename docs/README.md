@@ -14,3 +14,5 @@ J Lang is an **ultra secure** programming language. All J Lang variables are hom
 ### Language Design
 
 J Lang syntax is heavily inspired by **Dart** and **Rust**, with a little bit of **Java**.
+
+To read about the syntax check out the [language design docs](https://github.com/theswerd/j/tree/main/docs/design)
