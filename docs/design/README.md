@@ -14,17 +14,35 @@ J Lang is designed with 3 key principals:
 
 ##### Structure
 
+**Overall**:
 ```
 type name: trait1, trait2 = value
 ```
-
+**Primitives** 
+```
+let my-string = 'string'
+```
+**Set Type**
+```
+event my-type = (
+    location = 'Los Angeles',
+    description = 'J Lang Convention'
+)
+```
+**Trait**
+```
+let summarizable-type: summary = MySummarizableType(
+    name = 'type name',
+    description = 'description of whatever this is'
+)
+```
 
 ##### Examples
 
 Primitives:
 ```
-int age = 20; // mutable by default
-final string name = 'jlang';
+int age = 20 // mutable by default
+final string name = 'jlang'
 ```
 
 Types and Traits
@@ -80,3 +98,4 @@ let great-book: summary = book(
 - variable names cannot end with -
 - prefers single quote, allows double quote in formating with single quote is used in string
 - imports should be java styled + dart show/hide/as as they are not strings to be manipulated they are paths
+- multiline strings with `
