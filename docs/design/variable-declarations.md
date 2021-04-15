@@ -1,23 +1,23 @@
-## Variable Declarations
+# Variable Declarations
 
-### Structure
+## Structure
 
-**Overall**:
+### Overall:
 ```
 type name: trait1, trait2 = value
 ```
-**Primitives** 
+### Primitives
 ```
 let my-string = 'string'
 ```
-**Set Type**
+### Set Type
 ```
 event my-type = (
     location = 'Los Angeles',
     description = 'J Lang Convention'
 )
 ```
-**Trait**
+### Trait
 ```
 let summarizable-type: summary = MySummarizableType(
     name = 'type name',
@@ -25,7 +25,7 @@ let summarizable-type: summary = MySummarizableType(
 )
 ```
 
-### Examples
+## Examples
 
 Primitives:
 ```
