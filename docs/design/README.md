@@ -79,3 +79,4 @@ let great-book: summary = book(
 - Spaces are a part of syntax: g- is different than g -
 - variable names cannot end with -
 - prefers single quote, allows double quote in formating with single quote is used in string
+- imports should be java styled + dart show/hide/as as they are not strings to be manipulated they are paths
