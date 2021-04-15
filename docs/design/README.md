@@ -8,37 +8,76 @@ J Lang is designed with 3 key principals:
 
 3. **IDE Optimization**: J Lang is designed to be written in an IDE. J Lang syntax is designed to work well with autocomplete in order to allow both readability and agility in development.
 
+### Syntax Notes
 
-### Variable Declarations
+#### Variable Declarations
+
+##### Structure
 
 ```
-string name = 'jlang'
-
-int born = 2021
-
-float bens-height-in-meters = 1.778
+type name: trait1, trait2 = value
+```
 
 
-// Struct is not for sure yet
-struct user {
+##### Examples
+
+Primitives:
+```
+int age = 20; // mutable by default
+final string name = 'jlang';
+```
+
+Types and Traits
+```
+// Type definition
+type person {
+    string first-name,
+    string? middle-initial, // nullable
+    string last-name,
+    int age = 0 // default
+}
+
+type book {
     string name,
-    string bio,
-    int followers
+    string description
 }
 
-extend user {
-    user new-user (string name, {string biography = ''}) => {
-        followers = 0,
-        name,
-        bio: biography
-    }
+// Traits
+trait summary {
+    string get summary;
 }
 
-user my-user = {
-    name = 'jlang',
-    bio = 'new encrypted language',
-    followers = 15
+extend person with summary {
+   string summary => first-name + ' ' + middle-initial + ' ' + last-name
 }
 
-user my-user-2 = .new-user('jlang', biography: 'a super cool language')
+extend book with summary {
+   string summary => name + ': ' + description
+}
+
+person president = (
+    first-name = 'Joe',
+    middle-initial = 'R',
+    last-name = 'Biden'
+);
+
+
+let vice-president: summary = person(
+    first-name = 'Kamala',
+    middle-initial = 'D',
+    last-name = 'Harris'
+);
+
+let great-book: summary = book(
+    name = "Cryptonomicon",
+    description = 'The "cryptographer\'s bible"'
+);
 ```
+
+
+#### Other
+- Minimal use of caps - only using them for areas that are meant to be used in small amounts 
+- Language is kebab-case
+- Spaces are a part of syntax: g- is different than g -
+- variable names cannot end with -
+- prefers single quote, allows double quote in formating with single quote is used in string
