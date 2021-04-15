@@ -1,0 +1,25 @@
+{
+    "name": "j",
+    "displayName": "j",
+    "description": "j",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "j",
+            "aliases": ["J", "j"],
+            "extensions": [".j"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "j",
+            "scopeName": "source.j",
+            "path": "./syntaxes/j.tmLanguage.json"
+        }]
+    }
+}
