@@ -39,21 +39,19 @@ type person {
 
 type book {
     string name,
-    string description
+    string summary
 }
 
 // Traits
 trait summary {
-    string get summary;
+    string summary; // Can be getter or string
 }
 
 extend person with summary {
    string summary => first-name + ' ' + middle-initial + ' ' + last-name
 }
 
-extend book with summary {
-   string summary => name + ': ' + description
-}
+
 
 person president = (
     first-name = 'Joe',
@@ -70,7 +68,7 @@ let vice-president: summary = person(
 
 let great-book: summary = book(
     name = "Cryptonomicon",
-    description = 'The "cryptographer\'s bible"'
+    summary = 'The "cryptographer\'s bible"'
 );
 ```
 
